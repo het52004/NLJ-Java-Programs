@@ -5,7 +5,7 @@ public class Reverse {
         int number;
         System.err.println("Enter a number: ");
         Scanner sc = new Scanner(System.in);
-        number = Integer.parseInt(sc.nextLine());
+        number = sc.nextInt();
         System.out.println("The reverse of " + number + " is " + reverse(number));
         sc.close();
     }
