@@ -1,3 +1,10 @@
+/* 
+ * Priority of execution 
+ * 1. Static block
+ * 2. Main method
+ * 3. Instance block
+ * 4. Constructor
+*/
 public class TestInitialization {
     static {
         System.out.println("Static block"); // gets called even if object is not created
