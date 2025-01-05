@@ -1,1 +1,4 @@
 java docs = https://docs.oracle.com/javase/tutorial/
+
+command to compile and create package = javac -d . FileName.java
+command to run the file = java PackageName.FileName
