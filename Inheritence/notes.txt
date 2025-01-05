@@ -1,0 +1,5 @@
+// inheritence
+
+1. private members of a class are inherited to its child class but cannot be accessed directly. We can create get and set public methods in order to access them.
+
+2. private members can be accessed by inner classes.
