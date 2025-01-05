@@ -1,0 +1,14 @@
+// Access modifiers
+
+1. Private variables and methods can be accessed of outer class by inner class.
+
+2. Instance inner class needs object of outer class to be created in order to access methods of inner class
+   Eg:- Car c1 = new Car();
+        Car.Engine engine = c1.new Engine();
+
+        here Engine is inner class of Car, and if we want to create object of Engine class then we need to create object of car class then user that object to create object of engine class.
+
+3. Private variables of a super class are not inherited, so we cannot access them in child class. Though the 
+   private members of a super class are inherited but cannot be used and accessed directly, we can make public methods in super class in order to use them!
+
+
