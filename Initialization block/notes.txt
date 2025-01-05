@@ -1,0 +1,17 @@
+// Initialization block
+
+1. * Priority of execution 
+   * 1. Static block
+   * 2. Main method
+   * 3. Instance block
+   * 4. Constructor
+
+2. A static block can only access static variables and methods of class and it is only executed once, even if main method is empty and executed, the static block is also executed, no matter how many objects of the class is created, before main method the static block is executed.
+
+3. Once main method is executed and object of its respective class is created then at very first instance block is executed, an instance block can access both static and instance members of its respective class, both Constructor and instance block are only executed if the object of the class is created.
+
+4. both instance and static block does have any parameters and does not return any value.
+
+5. Constructor is executed just after instance block, same as instance block Constructor is called only after object is created.
+
+6. both Constructorand instance block are executed after every time new object is created, Eg:- if in main method of class Test, an object of Test is created 3 times then the Constructor and instance block will be executed 3 times all with new memory. As static block is only executed one time, no matter objects are created or not.
