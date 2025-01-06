@@ -35,3 +35,31 @@ Method overloading, also known as compile time polymorphism!
     }
 
     here if B inherits class A then B can also perform same as A, and overloading is done, program runs fine!
+
+6. class A {
+        public void overloadingInAClass(){
+            System.out.println("Overloading in A class");
+        }
+        public void overloadingInAClass(int a){
+            System.out.println("Overloading in A class with int parameter");
+        }
+    }
+    class B extends A{
+        public void overloadingInAClass(int a){
+            System.out.println("Overloading of A class overloaded method in B class with int parameter");
+        }
+    }
+
+    public class Overloading {
+        public static void main(String[] args) {
+            A a = new A();
+            a.overloadingInAClass();
+            a.overloadingInAClass(1);
+
+            B b = new B();
+            b.overloadingInAClass();
+            b.overloadingInAClass(1);
+        }
+    }
+
+    here also program runs fine, as if methods are called from A's object then the methods of A class will be executed successfully whereas if object of B class calls no parameterized method then method from A class will be executed but if B's object calls parameterized method then the method in B class will be excuted and overwrites the parameterized method of A class!
