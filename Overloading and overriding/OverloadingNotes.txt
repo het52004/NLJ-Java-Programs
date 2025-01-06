@@ -1,0 +1,37 @@
+Method overloading, also known as compile time polymorphism! 
+
+1. Methods having same names but different work is called method overloading.
+
+2. Method overloading is an example of compile-time polymorphism, where the method to be called is resolved during compilation.
+
+3. (i.)public void f1();
+   (ii.)public void f1(int a);
+   both above methods have same name but different parameters, when no arguments are passed during call then method (i.) is executed, if arguments are passed then method (ii.) is executed.
+
+4. Return type of the method does not matter in method overloading, Overloading solely depends on the parameter list. You cannot overload methods by just changing the return type.
+
+5. class A {
+        public void overloadingInAClass(){
+            System.out.println("Overloading in A class");
+        }
+        public void overloadingInAClass(int a){
+            System.out.println("Overloading in A class with int parameter");
+        }
+    }
+    class B extends A{
+        
+    }
+
+    public class Overloading {
+        public static void main(String[] args) {
+            // A a = new A();
+            // a.overloadingInAClass();
+            // a.overloadingInAClass(1);
+
+            // B b = new B();
+            // b.overloadingInAClass();
+            // b.overloadingInAClass(1);
+        }
+    }
+
+    here if B inherits class A then B can also perform same as A, and overloading is done, program runs fine!
