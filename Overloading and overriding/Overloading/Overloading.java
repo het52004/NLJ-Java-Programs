@@ -10,6 +10,9 @@ class B extends A{
     public void overloadingInAClass(int a){
         System.out.println("Overloading of A class overloaded method in B class with int parameter");
     }
+    public void overloadingInAClass(int a, int b){
+        System.out.println("Overloading of A class overloaded method in B class with two int parameter");
+    }
 }
 
 public class Overloading {

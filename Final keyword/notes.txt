@@ -1,0 +1,14 @@
+// final keyword
+
+1. final keyword with variables (value of variable cannot be changed after initialization is done once)
+
+    (i.) final instance variable:- is a type of variable which can be assigned value only once and cannot be changed later, there are three ways to initialize a final instance variable, final int a = 10; or using initialization block or constructor, if a final variable is set blank then it gives error, va
+    lue must be assigned!
+
+    (ii.) final static variable:- is a type of variable which can be assigned value only once and cannot be changed later, there are two ways to initialize a final static variable, final static int a = 20; or using static block, static { a = 20; }, if a final variable is set blank then it gives error, value must be assigned!
+
+    (iii.) final static local variable:- normal local variable must be initialized before using, so do final local variables. Ways to initialization final int c = 10; or c = 10;
+
+2. final keyword with class:- when final keyword is used with class, then that class will not be inherited (extended) by another class!
+
+3. final keyword with methods:- when final keyword is used with methods, then that method will not be overridden, but it can be used by child class, only it cannot be re-initialized(overridden)!
