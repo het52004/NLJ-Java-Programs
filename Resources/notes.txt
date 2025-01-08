@@ -3,3 +3,5 @@
 2. Local variables, variables that are declared inside a method must be assigned of a value, else it gives error!
 
 3. Global variables, variables that are declared in class and not in specific method, if not assigned value then by default 0 is stored.
+
+4. Overriding with static keyword is nothing but function hiding. instance = overriding, static = hiding

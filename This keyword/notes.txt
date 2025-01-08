@@ -1,0 +1,53 @@
+1. This keyword is a reference variable which is used as a reference to current object. used to avoid name collision!
+
+2. it refers to current object, of entire class. 
+
+3. example:- if we have local variable int a; and an instance variable(class variable) int a; then if variable a accessed in function of that local variable, then local variable is given preference, but what if we want to access instance variable int a? then we use this.a
+
+4. if we make an object of a class then this keyword is by default present in that class
+
+    public class ThisKeyword{
+        public static void main(String[] args){
+            A a = new A();
+            a.f1();
+        }
+    }
+
+    class A{
+        int a;
+        public void f1(int a){
+            this.a = a;
+        }
+    }
+
+    in class A there is an instance variable int a, which can be accessed only by making an object of class A!, now imagine what if we wanted to access int a, from class A, it is easy but what if in f1 function parameters there is another int a coming with different value!
+
+    here this keyword helps, 
+
+    A a = new A();
+    a.f1();
+
+    i made an object of class A as a so now there is "this" too in "a" object which refers to all the members of "a" object that i made! similarly what if i made one more object?
+
+    A a2 = new A();
+    a2.f1();
+
+    then "a2" also contains "this" keyword which only refers to members of "a2";
+
+    class A{
+        int a;
+        public void f1(int a){
+            a2.a = a; // completely wrong
+        }
+    }
+
+    here i can access instance variable this way too! but its completely wrong and gives error because we dont know what named object is going to be created on runtime! it is not mandatory that object of class A will be named as "a2" always! so to avoid such things we use "this" keyword
+
+    class A{
+        int a;
+        public void f1(int a){
+            this.a = a; // right
+        }
+    }
+
+    it is dynamic and no matter what named object and how many numbers of objects are created, each object has its seperate "this" keyword which refers to that particular object only!
