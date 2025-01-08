@@ -4,4 +4,39 @@
 
 2. private members can be accessed by inner classes.
 
-3. static members are inherited but cannot be modified!.
+3. In Java, static members (both variables and methods) are not inherited in the same way instance members  are. However, they are accessible to derived classes.
+
+
+class Parent {
+    static int x = 10;
+}
+
+class Child extends Parent {
+}
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(Child.x); // Accesses Parent's static variable
+    }
+}
+
+////
+
+class Parent {
+    static void display() {
+        System.out.println("Static method in Parent");
+    }
+}
+
+class Child extends Parent {
+    static void display() { // Method hiding
+        System.out.println("Static method in Child");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Parent.display(); // Calls Parent's static method
+        Child.display();  // Calls Child's static method
+    }
+}
