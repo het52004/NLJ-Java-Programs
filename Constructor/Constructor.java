@@ -3,6 +3,19 @@ public class Constructor {
         System.out.println("Constructor called");
     }
     public static void main(String[] args) {
-        Constructor obj = new Constructor();
+        B obj = new B(); // Both A and B constructor will be called
+    }
+}
+
+class A{
+    A(){
+        System.out.println("A Constructor called");
+    }
+}
+
+class B extends A{
+    B(){
+        // super(); // This will call the parent class constructor too! but only if it is the first line of the constructor of B.
+        System.out.println("B Constructor called");
     }
 }

@@ -1,0 +1,56 @@
+1. A constructor made in parent class by user, no matter parameterized or not, when that class is inherited then that constructor gets called by default!
+
+class A{
+    A(){
+        System.out.println("A Constructor called");
+    }
+}
+
+class B extends A{
+    B(){
+        // super(); // This will call the parent class constructor too! but only if it is the first line of the constructor of B.
+        System.out.println("B Constructor called");
+    }
+}
+
+here if A() {} is declared then no matter we declare a constructor of B or not, A(){} will always be called on objects of B class, and if A(int a){} is parameterized then B(){super(1);} must call super to avoid compile time error. 
+
+**********************************
+
+class A{
+    
+}
+
+class B extends A{
+    B(){
+        System.out.println("B Constructor called");
+    }
+}
+no problem in above code
+
+**********************************
+
+class A{
+    A(){
+        System.out.println("A Constructor called");
+    }
+}
+
+class B extends A{
+
+}
+in above code when object of B is created then A(){} constructor is called everytime on object creation!
+
+**********************************
+
+class A{
+    A(int a){
+        System.out.println("A Constructor called");
+    }
+}
+
+class B extends A{
+
+}
+
+gives error because if parent class constructor is parameterized then it must be called in child B(){super(1);} to avoid error.

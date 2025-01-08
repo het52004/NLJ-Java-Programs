@@ -40,3 +40,25 @@ public class Main {
         Child.display();  // Calls Child's static method
     }
 }
+
+
+4. When you create an object of class B, which extends class A, the constructor of A is always called to initialize the fields and behaviors inherited from A. However, no separate object of A is created explicitly—it's just the A portion within the B object that gets initialized.
+
+class A {
+    A() {
+        System.out.println("Constructor of A is called");
+    }
+}
+
+class B extends A {
+    B() {
+        System.out.println("Constructor of B is called");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        B obj1 = new B(); // Creates a single object of B, but A's constructor is called
+        B obj2 = new B(); // Another object of B, A's constructor is called again
+    }
+}
