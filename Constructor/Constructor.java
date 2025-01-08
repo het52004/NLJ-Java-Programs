@@ -11,6 +11,9 @@ class A{
     A(){
         System.out.println("A Constructor called");
     }
+    A(int a){
+        System.out.println("A Constructor called with a = " + a);
+    }
 }
 
 class B extends A{
