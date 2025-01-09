@@ -82,21 +82,25 @@ class TypesOfPrimeNumberOperations {
         System.out.print("Enter a number:- ");
         int number = sc.nextInt(), index = 1, count = 0;
         boolean isPrime;
-        for (int i = 0; count < number; i = ((i == 2) ? 3 : i + 2)) {
-            isPrime = true;
-            if (i < 2) {
-                isPrime = false;
-            }
-            for (int j = 2; j <= Math.sqrt(i); j++) {
-                if (i % j == 0) {
+        if (number < 1) {
+            System.out.println("Please enter number greater than 0!");
+        } else {
+            for (int i = 0; count < number; i = ((i == 2) ? 3 : i + 2)) {
+                isPrime = true;
+                if (i < 2) {
                     isPrime = false;
-                    break;
                 }
-            }
-            if (isPrime) {
-                System.out.println(index + ". " + i + " is a prime number");
-                index++;
-                count++;
+                for (int j = 2; j <= Math.sqrt(i); j++) {
+                    if (i % j == 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) {
+                    System.out.println(index + ". " + i + " is a prime number");
+                    index++;
+                    count++;
+                }
             }
         }
         sc.close();
