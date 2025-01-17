@@ -1,0 +1,67 @@
+Commonly Used Scanner Methods
+Input Reading Methods
+next()
+
+Reads a single word (delimited by spaces).
+Example: "Hello World" → next() reads "Hello".
+nextLine()
+
+Reads an entire line of input, including spaces, until the end of the line.
+Example: "Hello World" → nextLine() reads "Hello World".
+nextInt()
+
+Reads the next input as an int.
+Example: "123 456" → nextInt() reads 123.
+nextDouble()
+
+Reads the next input as a double.
+Example: "12.34 56.78" → nextDouble() reads 12.34.
+nextFloat()
+
+Reads the next input as a float.
+Example: "5.5 6.7" → nextFloat() reads 5.5.
+nextLong()
+
+Reads the next input as a long.
+Example: "123456789" → nextLong() reads 123456789.
+nextShort()
+
+Reads the next input as a short.
+Example: "32000" → nextShort() reads 32000.
+nextByte()
+
+Reads the next input as a byte.
+Example: "127" → nextByte() reads 127.
+nextBoolean()
+
+Reads the next input as a boolean (true or false).
+Example: "true false" → nextBoolean() reads true.
+Utility and Validation Methods
+hasNext()
+
+Returns true if the scanner has another token to read.
+Example: "Hello World" → hasNext() is true.
+hasNextInt()
+
+Returns true if the next token is an int.
+Example: "123 Hello" → hasNextInt() is true.
+hasNextDouble()
+
+Returns true if the next token is a double.
+Example: "12.34 Hello" → hasNextDouble() is true.
+hasNextLine()
+
+Returns true if there is another line of input.
+Example: "Hello\nWorld" → hasNextLine() is true.
+close()
+
+Closes the scanner and releases the underlying resources.
+Delimiter Control
+useDelimiter(String pattern)
+
+Sets a custom delimiter for separating tokens.
+Example: Using scanner.useDelimiter(",") treats "," as the delimiter instead of whitespace.
+delimiter()
+
+Returns the current delimiter pattern.
+Example: Default delimiter is whitespace (\s+).
