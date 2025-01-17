@@ -10,12 +10,17 @@ public class TestFile {
             FileWriter writer  = new FileWriter("sum.txt");
             Scanner sc = new Scanner(testFile);
             while (sc.hasNext()) {
-                sum = sum + Integer.parseInt(sc.next());
+                String values = sc.next();
+                sum = sum + Integer.parseInt(values);
             }
             writer.write("Sum of numbers is = " + sum);
             sc.close();
             writer.close();
-        } catch (Exception e) {
+        } 
+        catch (NumberFormatException e) {
+            System.out.println("Enter only space seperated or line seperated numbers to add.");
+        }
+        catch(Exception e){
             System.out.println(e.getMessage());
         }
     }
