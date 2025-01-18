@@ -7,20 +7,18 @@ public class TestFile {
             int sum = 0;
             String fileName = "TestFile.txt";
             File testFile = new File(fileName);
-            FileWriter writer  = new FileWriter("sum.txt");
+            FileWriter writer = new FileWriter("sum.txt", true);
             Scanner sc = new Scanner(testFile);
             while (sc.hasNext()) {
                 String values = sc.next();
                 sum = sum + Integer.parseInt(values);
             }
-            writer.write("Sum of numbers is = " + sum);
+            writer.write(System.lineSeparator() + "Sum of numbers is = " + sum);
             sc.close();
             writer.close();
-        } 
-        catch (NumberFormatException e) {
+        } catch (NumberFormatException e) {
             System.out.println("Enter only space seperated or line seperated numbers to add.");
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
