@@ -1,12 +1,5 @@
-Sum of numbers is = 40
-Sum of numbers is = 40
-
-Sum of numbers is = 40
-
-Sum of numbers is = 40
-Sum of numbers is = 40
-Sum of numbers is = 40
-Sum of numbers is = 40
-Sum of numbers is = 40
-Sum of numbers is = 40
-Sum of numbers is = 4
+Sum of numbers is = 2
+Sum of numbers is = 2
+Sum of numbers is = 2
+Sum of numbers is = 2
+Sum of numbers is = 2

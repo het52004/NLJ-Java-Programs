@@ -7,13 +7,14 @@ public class TestFile {
             int sum = 0;
             String fileName = "TestFile.txt";
             File testFile = new File(fileName);
-            FileWriter writer = new FileWriter("sum.txt", true);
+            BufferedWriter writer = new BufferedWriter(new FileWriter("sum.txt", true));
             Scanner sc = new Scanner(testFile);
             while (sc.hasNext()) {
                 String values = sc.next();
                 sum = sum + Integer.parseInt(values);
             }
-            writer.write(System.lineSeparator() + "Sum of numbers is = " + sum);
+            writer.write("Sum of numbers is = " + sum);
+            writer.newLine();
             sc.close();
             writer.close();
         } catch (NumberFormatException e) {
