@@ -1,0 +1,75 @@
+The `File` class in Java, part of the `java.io` package, provides a wide range of methods to manipulate file and directory paths. Below is a categorized list of the most commonly used methods:
+
+---
+
+### **File Operations**
+- `boolean createNewFile()`: Creates a new file if it does not already exist.
+- `boolean delete()`: Deletes the file or directory.
+
+---
+
+### **File Properties**
+- `String getName()`: Returns the name of the file or directory.
+- `String getParent()`: Returns the parent directory of the file.
+- `File getParentFile()`: Returns the parent directory as a `File` object.
+- `String getPath()`: Returns the path of the file as a string.
+- `String getAbsolutePath()`: Returns the absolute pathname string.
+- `File getAbsoluteFile()`: Returns the absolute `File` object.
+- `String getCanonicalPath()`: Returns the canonical pathname string.
+- `File getCanonicalFile()`: Returns the canonical `File` object.
+
+---
+
+### **File Status**
+- `boolean exists()`: Checks if the file or directory exists.
+- `boolean isDirectory()`: Checks if the file is a directory.
+- `boolean isFile()`: Checks if the file is a normal file.
+- `boolean isHidden()`: Checks if the file is hidden.
+- `long length()`: Returns the length of the file in bytes.
+- `long lastModified()`: Returns the last modification time of the file.
+
+---
+
+### **File Permissions**
+- `boolean canRead()`: Checks if the file is readable.
+- `boolean canWrite()`: Checks if the file is writable.
+- `boolean canExecute()`: Checks if the file is executable.
+- `boolean setReadable(boolean readable)`: Sets the file's readability.
+- `boolean setWritable(boolean writable)`: Sets the file's writability.
+- `boolean setExecutable(boolean executable)`: Sets the file's executability.
+- `boolean setReadOnly()`: Marks the file as read-only.
+
+---
+
+### **Directory Operations**
+- `boolean mkdir()`: Creates a single directory.
+- `boolean mkdirs()`: Creates the directory, including any necessary but nonexistent parent directories.
+- `String[] list()`: Returns an array of filenames in the directory.
+- `File[] listFiles()`: Returns an array of `File` objects representing files in the directory.
+- `File[] listFiles(FileFilter filter)`: Returns an array of `File` objects that satisfy the filter.
+- `File[] listFiles(FilenameFilter filter)`: Returns an array of `File` objects that satisfy the filename filter.
+
+---
+
+### **Path and URI Handling**
+- `boolean renameTo(File dest)`: Renames the file or directory.
+- `URI toURI()`: Converts the file path to a URI.
+- `Path toPath()`: Converts the file to a `java.nio.file.Path`.
+
+---
+
+### **Utility Methods**
+- `static File[] listRoots()`: Lists the available filesystem roots.
+- `static File createTempFile(String prefix, String suffix)`: Creates a temporary file in the default temp directory.
+- `static File createTempFile(String prefix, String suffix, File directory)`: Creates a temporary file in the specified directory.
+- `int compareTo(File pathname)`: Compares two `File` objects lexicographically.
+- `boolean equals(Object obj)`: Checks if two `File` objects are equal.
+- `int hashCode()`: Returns the hash code of the `File` object.
+
+---
+
+These methods provide robust functionality for working with files and directories in Java. To use the `File` class, you need to import it as follows:
+
+```java
+import java.io.File;
+```
