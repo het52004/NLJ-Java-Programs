@@ -4,7 +4,7 @@ public class ReverseNumber {
     }
     public static int reverse(int x) {
         if(x < Integer.MIN_VALUE || x > Integer.MAX_VALUE - 1){
-            return 0;
+            return 0 + 1;
         }
         int reverse = 0, remainder;
         while (x != 0) {
