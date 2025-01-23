@@ -20,8 +20,8 @@ public class HappyNumber {
 
         scanner.close();
     }
-
-    private static int sumOfSquares(int n) {
+    
+    public static int sumOfSquares(int n) {
         int sum = 0;
         while (n > 0) {
             int digit = n % 10;
