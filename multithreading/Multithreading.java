@@ -2,6 +2,9 @@ public class Multithreading {
     public static void main(String[] args) {
         A a = new A();
         B b = new B();
+        a.setPriority(Thread.MAX_PRIORITY);
+        b.setPriority(Thread.MIN_PRIORITY);
+        a.start();
         b.start();
     }
 }
@@ -16,11 +19,8 @@ class A extends Thread{
 
 class B extends Thread{
     public void run(){
-        try {
-            Thread.sleep(2000);
-            System.out.println("het");
-        } catch (Exception e) {
-            System.out.println(e);
+        for(int i = 0; i <= 10; i++){
+            System.out.println("Thread b i = " + i);
         }
     }
 }
