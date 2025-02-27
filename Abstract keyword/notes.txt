@@ -5,3 +5,6 @@
 3. why abstract class? consider a class person in college point of view, it has no meaning, it just contains name and age, while consider class student and teacher, both has meanings, and both also has similar attributes, so insted of declaring them in both student and teacher we can declare them in an abstract class, in a college nobody is person, either they are student or they are teacher, so there is no point of creating an object of a person class.
 
 4. it acts same as normal class, it also has constructor and rules are same!
+
+5. if an abstract class is created and inherited by other class then it is mandatory for that other class to override and define all the abstract methods that are declared in the parent abstract method! if not then error.
+
