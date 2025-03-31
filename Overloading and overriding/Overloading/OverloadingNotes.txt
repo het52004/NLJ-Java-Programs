@@ -8,7 +8,7 @@ Method overloading, also known as compile time polymorphism!
    (ii.)public void f1(int a);
    both above methods have same name but different parameters, when no arguments are passed during call then method (i.) is executed, if arguments are passed then method (ii.) is executed.
 
-4. Return type of the method does not matter in method overloading, Overloading solely depends on the parameter list. You cannot overload methods by just changing the return type.
+4. Return type of the method does not matter in method overloading, Overloading solely depends on the parameter list. **You cannot overload methods by just changing the return type**.
 
 5. class A {
         public void overloadingInAClass(){

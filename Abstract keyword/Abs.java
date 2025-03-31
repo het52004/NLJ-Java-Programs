@@ -2,12 +2,15 @@ public class Abs {
     public static void main(String[] args) {
         Student s1 = new Student();
         s1.setData(20, 1, "John");
+        s1.getData();
     }
 }
 
 abstract class Person {
-    int age;
+    int age = 3;
     String name;
+    abstract void setData(int age, int rollNo, String name);
+    abstract void getData();
 }
 
 class Student extends Person {

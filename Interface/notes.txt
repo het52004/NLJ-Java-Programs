@@ -1,0 +1,33 @@
+Imagine an electric socket in your house.
+
+The socket (interface) allows different devices (AC, Fan, Charger) to plug in.
+
+Devices implement their own functionality (AC cools, Fan rotates, Charger charges).
+
+You don’t need a separate socket for each device → One socket (interface) works for all!
+
+That’s what interfaces do in Java!
+
+
+interface Payment {
+    void pay();
+}
+
+class CreditCard implements Payment {
+    public void pay() {
+        System.out.println("Paying with Credit Card...");
+    }
+
+    public void checkBalance() {  // Extra method (not in Payment)
+        System.out.println("Checking Credit Card balance...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Payment p = new CreditCard();  
+        p.pay();  // ✅ Works: "Paying with Credit Card..."
+        
+        // p.checkBalance();  // ❌ ERROR! Because 'checkBalance' is not in Payment
+    }
+}

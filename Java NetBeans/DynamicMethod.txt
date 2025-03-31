@@ -1,0 +1,90 @@
+it is also called runtime polymorphism
+
+class Remote {  // Parent class
+    public void turnOn() {
+        System.out.println("Turning on the device...");
+    }
+}
+
+class Samsung extends Remote {  // Child class
+    public void turnOn() {
+        System.out.println("Turning on Samsung TV...");
+    }
+}
+
+class Sony extends Remote {  // Another child class
+    public void turnOn() {
+        System.out.println("Turning on Sony TV...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Remote remote;  // Remote control reference
+
+        remote = new Samsung();  // Using it for Samsung TV
+        remote.turnOn();  // Output: Turning on Samsung TV...
+
+        remote = new Sony();  // Now, using it for Sony TV
+        remote.turnOn();  // Output: Turning on Sony TV...
+    }
+}
+
+interface Remote {  // Interface (like a contract)
+    void turnOn();
+}
+
+class Samsung implements Remote {  // Samsung follows the contract
+    public void turnOn() {
+        System.out.println("Turning on Samsung TV...");
+    }
+}
+
+class Sony implements Remote {  // Sony also follows the contract
+    public void turnOn() {
+        System.out.println("Turning on Sony TV...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Remote remote;  // Interface reference
+
+        remote = new Samsung();  
+        remote.turnOn();  // Output: Turning on Samsung TV...
+
+        remote = new Sony();  
+        remote.turnOn();  // Output: Turning on Sony TV...
+    }
+}
+
+interface Payment {
+    void pay();
+}
+
+class CreditCard implements Payment {
+    public void pay() {
+        System.out.println("Paying with Credit Card...");
+    }
+
+    public void checkBalance() {  // Extra method (not in Payment)
+        System.out.println("Checking Credit Card balance...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Payment p = new CreditCard();  
+        p.pay();  // ✅ Works: "Paying with Credit Card..."
+        
+        // p.checkBalance();  // ❌ ERROR! Because 'checkBalance' is not in Payment
+    }
+}
+
+in dynamic method dispatch program in another file DynamicMethodDispatch.java
+
+we have class A and class B.
+
+A a = new B(); when we write this line, the object of class B is created but reference is of class A so we can only access methods and variables from class A, even if object of class B is created, if we access anything additional that is not in class A but is in class B then it gives error.
+
+no matter if it is interface, abstract class or simple class A a = new B(); if you are doing like this then you will only be able to access the properties of referenced class, interface type!
