@@ -1,0 +1,7 @@
+Use final keyword on methods to prevent overriding.
+
+Use final on the class to prevent subclassing altogether.
+
+Use private methods to hide methods from subclasses.
+
+Use static methods as they cannot be overridden, only hidden.

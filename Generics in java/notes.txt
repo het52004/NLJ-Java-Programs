@@ -1,0 +1,6 @@
+generics are used to data type safe and remove manual casting.
+
+<> angular brackets where we mention the type.
+
+1. Generic class
+
